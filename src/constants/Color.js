@@ -1,0 +1,18 @@
+module.exports = {
+    PINK: '#e7a781',
+    WHITE: '#FFFFFF',
+    TEXT_INPUT_UNDERLINE_COLOR: '#BCBCBC',
+    BLACK: '#000000',
+    DARK_GRAY: '#4D4D4D',
+    BUTTON_PRESS_COLOR: '#1E8E6E',
+    LIGHT_GRAY: '#fbfbfb',
+    NEW_STATUS_COLOR: '#c94fec',
+    OPEN_STATUS_COLOR: '#20ec25',
+    REVIEW_STATUS_COLOR: '#13c6ec',
+    APPROVED_STATUS_COLOR: '#1e3eec',
+    ARCHIVED_STATUS_COLOR: '#bc4873',
+    CLOSE_STATUS_COLOR: '#ec197d',
+    DARK_GRAY_LOW: '#757373',
+    LIGHT_GRAY_HIGH: '#7e7e7e',
+    INDICATION_COLOR: '#0000ff'
+};

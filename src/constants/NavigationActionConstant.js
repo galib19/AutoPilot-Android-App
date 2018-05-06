@@ -1,0 +1,4 @@
+export const NEXT_PAGE = 'NEXT_PAGE';
+export const RESET_PAGE = 'RESET_PAGE';
+export const NEXT_PAGE_WITH_DATA_OBJECT = 'NEXT_PAGE_WITH_DATA_OBJECT';
+export const PREVIOUS_PAGE = 'PREVIOUS_PAGE';

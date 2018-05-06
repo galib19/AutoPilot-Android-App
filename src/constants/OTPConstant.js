@@ -1,0 +1,6 @@
+module.exports = {
+    NUMBER_ONE: 'NUMBER_ONE',
+    NUMBER_TWO: 'NUMBER_TWO',
+    NUMBER_THREE: 'NUMBER_THREE',
+    NUMBER_FOUR: 'NUMBER_FOUR'
+};
