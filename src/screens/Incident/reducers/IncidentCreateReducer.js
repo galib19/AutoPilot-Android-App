@@ -14,7 +14,15 @@ import {
     INCIDENT_CREATE_SET_INCIDENT_INFO,
     INCIDENT_CREATE_NEW_INCIDENT,
     INCIDENT_CREATE_NEW_INCIDENT_SUCCESS,
-    INCIDENT_CREATE_NEW_INCIDENT_FAILURE
+    INCIDENT_CREATE_NEW_INCIDENT_FAILURE,
+    TICKET_ETA_ERT_SET,
+    TICKET_ETA_ERT_SET_API,
+    TICKET_ETA_ERT_SET_API_SUCCESS,
+    TICKET_ETA_ERT_SET_API_FAILURE,
+    TICKET_STATUS,
+    TICKET_STATUS_API,
+    TICKET_STATUS_API_SUCCESS,
+    TICKET_STATUS_API_FAILURE
 } from '../constants/IncidentCreateConstant';
 
 import {getGenderList} from '../../../constants/GenderList';
@@ -24,20 +32,10 @@ import FileConstant from '../../../constants/FileConstant';
 
 const initialState = {
     isFetching: false,
-    genderList: getGenderList(),
-    genderTitle: IncidentCreateInfo.SELECT_GENDER,
-    violenceList: [],
-    violenceTitle: IncidentCreateInfo.SELECT_VIOLENCE_TYPE,
-    fileList: [],
-    photoList: [],
-    checkBoxList: [],
-    victimName: '',
-    victimParents: '',
-    victimAge: '',
-    victimLocation: '',
-    caseName: '',
-    caseDetails: '',
-    caseDate: ''
+    eta: '', 
+    ert: '',
+    case_id: '',
+    ticket_status: ''
 };
 
 export default function incidentCreateReducer(state = initialState, action) {
@@ -111,7 +109,9 @@ export default function incidentCreateReducer(state = initialState, action) {
                 victimLocation: '',
                 caseName: '',
                 caseDetails: '',
-                caseDate: ''
+                caseDate: '',
+                eta: '',
+                ert: '' 
             };
         case INCIDENT_CREATE_INITIAL_ATTACHMENT_PAGE_INFO:
             return {
@@ -162,6 +162,50 @@ export default function incidentCreateReducer(state = initialState, action) {
                 ...state,
                 isFetching: false
             };
+        case TICKET_ETA_ERT_SET:
+        return {
+            ...state,
+            eta: action.key === IncidentCreateInfo.ETA ? action.value : state.eta,
+            ert: action.key === IncidentCreateInfo.ERT ? action.value : state.ert,
+            case_id: action.key === IncidentCreateInfo.TICKET_ID ? action.value : state.case_id
+            };
+        case TICKET_ETA_ERT_SET_API:
+            return {
+                ...state,
+                isFetching: true
+            };
+            case TICKET_ETA_ERT_SET_API_SUCCESS:
+            return {
+                ...state,
+                isFetching: false
+            };
+        case TICKET_ETA_ERT_SET_API_FAILURE:
+            return {
+                ...state,
+                isFetching: false
+            };
+        case TICKET_STATUS:
+        return {
+            ...state,
+            case_id: action.key === IncidentCreateInfo.TICKET_ID ? action.value : state.case_id,
+            ticket_status: action.key === IncidentCreateInfo.TICKET_STATUS ? action.value : state.ticket_status
+            };
+        case TICKET_STATUS_API:
+            return {
+                ...state,
+                isFetching: true
+            };
+        case TICKET_ETA_ERT_SET_API_SUCCESS:
+            return {
+                ...state,
+                isFetching: false
+            };
+        case TICKET_ETA_ERT_SET_API_FAILURE:
+            return {
+                ...state,
+                isFetching: false
+            };
+
         default:
             return state
     }

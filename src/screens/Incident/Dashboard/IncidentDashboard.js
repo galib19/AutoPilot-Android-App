@@ -45,11 +45,7 @@ class IncidentDashboard extends Component {
                     <Text style={style.emptyBodyTextStyle}>
                         {AppText.PLEASE_POST_YOUR_CASE_HERE}
                     </Text>
-                    <View style={style.addCaseViewStyle}>
-                        <Text style={style.addCaseTextStyle}>
-                            {AppText.ADD_CASE}
-                        </Text>
-                    </View>
+                    
                 </View>
         } else {
             previousCaseButton =
@@ -76,12 +72,10 @@ class IncidentDashboard extends Component {
                         <View style={style.topViewRootStyle}>
                             <Text style={style.currentCaseTextStyle}>{AppText.LATEST_CASE}</Text>
                             <View style={style.statusViewRootStyle}>
-                                <StatusView backgroundColor={color.NEW_STATUS_COLOR} title={Status.NEW}/>
-                                <StatusView backgroundColor={color.REVIEW_STATUS_COLOR} title={Status.REVIEWED}/>
-                                <StatusView backgroundColor={color.OPEN_STATUS_COLOR} title={Status.OPEN}/>
-                                <StatusView backgroundColor={color.APPROVED_STATUS_COLOR} title={Status.APPROVED}/>
-                                <StatusView backgroundColor={color.ARCHIVED_STATUS_COLOR} title={Status.ARCHIVED}/>
-                                <StatusView backgroundColor={color.CLOSE_STATUS_COLOR} title={Status.CLOSE}/>
+                                <StatusView backgroundColor={color.ASSIGNED_STATUS_COLOR} title={Status.ASSIGNED}/>
+                                <StatusView backgroundColor={color.IN_PROGRESS_STATUS_COLOR} title={Status.IN_PROGRESS}/>
+                                <StatusView backgroundColor={color.COMPLETED_STATUS_COLOR} title={Status.COMPLETED}/>
+                                <StatusView backgroundColor={color.FAILED_STATUS_COLOR} title={Status.FAILED}/>
                             </View>
                         </View>
 
@@ -95,15 +89,7 @@ class IncidentDashboard extends Component {
 
                 <CustomIndicator isVisible={this.props.dashboardScreenReducer.isFetching}/>
 
-                <ActionButton buttonColor={color.PINK}
-                              size={size.FLOATING_BUTTON_SIZE}
-                              onPress={() => this.props.goToNextPage('VictimInfo')}
-                              position={!isDataAvailable ? 'center' : 'right'}
-                              offsetY={!isDataAvailable ? 70 : 30}
-                              renderIcon={() => <MaterialCommunityIcons name="plus"
-                                                                        size={size.FLOATING_BUTTON_ICON_SIZE}
-                                                                        color={color.WHITE}/>}>
-                </ActionButton>
+                 
 
             </View>
         );
@@ -118,7 +104,7 @@ class IncidentDashboard extends Component {
         await FCM.on(FCMEvent.RefreshToken, token => {
             fireBaseToken = token;
         });
-        this.props.getMostRecentCaseData();
+       this.props.getMostRecentCaseData();
         if (fireBaseToken !== null && fireBaseToken.length > 0) {
             let body = {
                 "fcm_token": fireBaseToken,

@@ -12,7 +12,6 @@ import {getStringValue} from '../../../../components/Validation/EmptyCheck';
 
 class IncidentRowData extends Component {
     render() {
-        let victimInfo = this.props.data.victims[0];
         return (
             <TouchableOpacity underlayColor={color.BUTTON_PRESS_COLOR}
                               onPress={() => this.props.incidentDetailPress(this.props.data)}>
@@ -25,18 +24,6 @@ class IncidentRowData extends Component {
                     <Text style={style.caseTitleTextStyle}>
                         {this.props.data.case_title}
                     </Text>
-
-                    <Text style={style.personalInfoRootStyle}>
-                        <VictimPersonalInfo label={AppText.VICTIM_NAME_LABEL}
-                                            value={getStringValue(victimInfo.name)}/>
-                    </Text>
-
-                    <View style={style.locationRootStyle}>
-                        <Entypo name='location-pin' color={color.DARK_GRAY_LOW} size={size.TOOLBAR_ICON_SIZE}/>
-                        <Text style={style.locationTextStyle}>
-                            {getStringValue(victimInfo.location)}
-                        </Text>
-                    </View>
                 </View>
             </TouchableOpacity>
         );

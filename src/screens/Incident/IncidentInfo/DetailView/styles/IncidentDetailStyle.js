@@ -52,5 +52,25 @@ export default StyleSheet.create({
         justifyContent: 'flex-end',
         alignItems: 'center',
         marginTop: 10
+    }, acceptButtonStyle: {
+        height: size.BUTTON_HEIGHT,
+        backgroundColor: color.COMPLETED_STATUS_COLOR,
+        marginTop: 20,
+        marginRight: 3,
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginLeft: 3
+    }, rejectButtonStyle: {
+        height: size.BUTTON_HEIGHT,
+        backgroundColor: '#ff9966',
+        marginVertical: 13,
+        marginRight: 3,
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginLeft:5 
+    }, statusTextStyle: {
+        color: color.LIGHT_GRAY_HIGH,
+        fontSize: size.FONT_SIZE_S,
+        marginLeft: 3
     }
 })

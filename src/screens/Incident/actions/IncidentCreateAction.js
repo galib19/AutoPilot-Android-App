@@ -10,7 +10,11 @@ import {
     INCIDENT_CREATE_INITIAL_ATTACHMENT_PAGE_INFO,
     INCIDENT_CREATE_GET_SETTING,
     INCIDENT_CREATE_SET_INCIDENT_INFO,
-    INCIDENT_CREATE_NEW_INCIDENT
+    INCIDENT_CREATE_NEW_INCIDENT,
+    TICKET_ETA_ERT_SET,
+    TICKET_ETA_ERT_SET_API,
+    TICKET_STATUS,
+    TICKET_STATUS_API
 } from '../constants/IncidentCreateConstant';
 
 export function selectGenderFromIncidentCreate(selectedGender) {
@@ -91,6 +95,35 @@ export function setIncidentInfo(key, value) {
 export function callIncidentCreateApi(body) {
     return {
         type: INCIDENT_CREATE_NEW_INCIDENT,
+        body
+    }
+}
+
+export function setEtaErt(key, value) {
+    return {
+        type: TICKET_ETA_ERT_SET,
+        key,
+        value
+    }
+}
+
+export function callSetEtaErtApi(body) {
+    return {
+        type: TICKET_ETA_ERT_SET_API,
+        body
+    }
+}
+export function updateStatus(key, value) {
+    return {
+        type: TICKET_STATUS,
+        key,
+        value
+    }
+}
+
+export function callUpdateStatusApi(body) {
+    return {
+        type: TICKET_STATUS_API,
         body
     }
 }

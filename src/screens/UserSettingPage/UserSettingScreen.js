@@ -75,10 +75,10 @@ class UserSettingScreen extends Component {
                 <ScrollView style={styles.rootStyle} keyboardShouldPersistTaps='handled'>
                     <View style={[styles.rootStyle, {padding: 16}]}>
                         <View style={styles.profileInfoRootStyle}>
-                            {profileImageView}
+                            {/* {profileImageView} */}
                             <View style={styles.rightRootStyle}>
                                 <Text style={styles.nameTextStyle}>{this.state.userName}</Text>
-                                <Text style={styles.designationTextStyle}>{this.state.userDesignation}</Text>
+                                <Text style={styles.designationTextStyle}>Engineer</Text>
                             </View>
                         </View>
 

@@ -8,5 +8,9 @@ module.exports = {
     CASE_DETAILS: 'CASE_DETAILS',
     SELECT_VIOLENCE_TYPE: 'Select Violence Type',
     CASE_DATE: 'CASE_DATE',
-    FILE_NAME_KEY: 'multi_files[]'
+    FILE_NAME_KEY: 'multi_files[]',
+    ETA: 'ETA',
+    ERT: 'ERT',
+    TICKET_ID: 'TICKET_ID',
+    TICKET_STATUS: 'TICKET_STATUS'
 };

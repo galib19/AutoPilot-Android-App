@@ -15,7 +15,7 @@ export default StyleSheet.create({
         fontWeight: 'bold',
         color: color.BLACK
     }, statusViewRootStyle: {
-        marginLeft: 20,
+        marginLeft: 10,
         flexDirection: 'row',
         flex: 1,
         flexWrap: 'wrap'
@@ -25,14 +25,14 @@ export default StyleSheet.create({
         padding: 16
     }, previousCaseButtonRootStyle: {
         height: size.BUTTON_HEIGHT,
-        backgroundColor: color.WHITE,
+        backgroundColor: color.LIGHT_GRAY_HIGH,
         marginVertical: 20,
-        marginRight: 100,
+        marginRight: 16,
         justifyContent: 'center',
         alignItems: 'center',
         marginLeft: 16
     }, previousCaseButtonTextStyle: {
-        color: color.BLACK,
+        color: color.WHITE,
         fontWeight: 'bold',
         fontSize: size.FONT_SIZE_S
     }, emptyViewRootStyle: {

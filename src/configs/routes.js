@@ -7,6 +7,7 @@ import IncidentDashboard from '../screens/Incident/Dashboard/IncidentDashboard';
 import AllIncidentDashboard from '../screens/Incident/IncidentInfo/IncidentList/AllIncidentDashboard';
 import IncidentDetailScreen from '../screens/Incident/IncidentInfo/DetailView/IncidentDetailScreen';
 import VictimInfo from '../screens/Incident/IncidentInfo/IncidentCreate/VictimInfo';
+import AcceptInfo from '../screens/Incident/IncidentInfo/IncidentCreate/AcceptInfo';
 import CaseInfo from '../screens/Incident/IncidentInfo/IncidentCreate/CaseInfo';
 import IncidentAttachmentInfo from '../screens/Incident/IncidentInfo/IncidentCreate/IncidentAttachmentInfo';
 import RefereedInfo from '../screens/Incident/IncidentInfo/IncidentCreate/RefereedInfo';
@@ -60,6 +61,11 @@ const AppNavigator = StackNavigator({
     },
     RefereedInfo: {
         screen: RefereedInfo, navigationOptions: ({navigation}) => ({
+            headerBackTitle: null
+        })
+    },
+    AcceptInfo: {
+        screen: AcceptInfo, navigationOptions: ({navigation}) => ({
             headerBackTitle: null
         })
     },

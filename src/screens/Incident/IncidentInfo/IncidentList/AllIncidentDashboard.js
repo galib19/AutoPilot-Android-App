@@ -28,12 +28,10 @@ class AllIncidentDashboard extends Component {
         return (
             <View style={style.rootStyle}>
                 <View style={style.statusRootStyle}>
-                    <StatusView backgroundColor={color.NEW_STATUS_COLOR} title={Status.NEW}/>
-                    <StatusView backgroundColor={color.REVIEW_STATUS_COLOR} title={Status.REVIEWED}/>
-                    <StatusView backgroundColor={color.OPEN_STATUS_COLOR} title={Status.OPEN}/>
-                    <StatusView backgroundColor={color.APPROVED_STATUS_COLOR} title={Status.APPROVED}/>
-                    <StatusView backgroundColor={color.ARCHIVED_STATUS_COLOR} title={Status.ARCHIVED}/>
-                    <StatusView backgroundColor={color.CLOSE_STATUS_COLOR} title={Status.CLOSE}/>
+                    <StatusView backgroundColor={color.ASSIGNED_STATUS_COLOR} title={Status.ASSIGNED}/>
+                    <StatusView backgroundColor={color.IN_PROGRESS_STATUS_COLOR} title={Status.IN_PROGRESS}/>
+                    <StatusView backgroundColor={color.COMPLETED_STATUS_COLOR} title={Status.COMPLETED}/>
+                    <StatusView backgroundColor={color.FAILED_STATUS_COLOR} title={Status.FAILED}/>
                 </View>
 
                 <IncidentList renderFooter={this.renderFooter.bind(this)}
