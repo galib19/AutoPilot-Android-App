@@ -8,6 +8,8 @@ import AllIncidentDashboard from '../screens/Incident/IncidentInfo/IncidentList/
 import IncidentDetailScreen from '../screens/Incident/IncidentInfo/DetailView/IncidentDetailScreen';
 import VictimInfo from '../screens/Incident/IncidentInfo/IncidentCreate/VictimInfo';
 import AcceptInfo from '../screens/Incident/IncidentInfo/IncidentCreate/AcceptInfo';
+import Map from '../screens/Incident/IncidentInfo/IncidentCreate/Map';
+import MapDashboard from '../screens/Incident/IncidentInfo/IncidentCreate/MapDashboard';
 import CaseInfo from '../screens/Incident/IncidentInfo/IncidentCreate/CaseInfo';
 import IncidentAttachmentInfo from '../screens/Incident/IncidentInfo/IncidentCreate/IncidentAttachmentInfo';
 import RefereedInfo from '../screens/Incident/IncidentInfo/IncidentCreate/RefereedInfo';
@@ -66,6 +68,16 @@ const AppNavigator = StackNavigator({
     },
     AcceptInfo: {
         screen: AcceptInfo, navigationOptions: ({navigation}) => ({
+            headerBackTitle: null
+        })
+    },
+    Map: {
+        screen: Map, navigationOptions: ({navigation}) => ({
+            headerBackTitle: null
+        })
+    },
+    MapDashboard: {
+        screen: MapDashboard, navigationOptions: ({navigation}) => ({
             headerBackTitle: null
         })
     },

@@ -95,5 +95,6 @@ module.exports = {
     OTP_SEND_SUCCESSFULLY: 'OTP send to your mobile successfully',
     OTP_RESEND_SUCCESSFULLY: 'OTP resend to your mobile successfully',
     PASSWORD_RESET_SUCCESSFULLY: 'Password reset successfully',
-    LOGOUT_SUCCESSFULLY: 'Logout successfully'
+    LOGOUT_SUCCESSFULLY: 'Logout successfully',
+    TICKET_MAP: 'Location'
 };

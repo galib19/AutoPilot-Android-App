@@ -5,27 +5,30 @@ import size from '../../../../../constants/Size';
 export default StyleSheet.create({
     rootStyle: {}, titleRootViewStyle: {
         flexDirection: 'row',
-        alignItems: 'center'
+        alignItems: 'center',
+        backgroundColor: '#DCDFE0'
     }, caseTitleStyle: {
         flex: 1,
-        color: color.BLACK,
-        fontSize: size.FONT_SIZE_M,
-        fontWeight: 'bold'
+        color: color.DARK_GRAY,
+        fontSize: size.FONT_SIZE_S,
+        fontWeight: 'bold',
+        marginLeft: 5
     }, statusColorViewStyle: {
-        width: 20,
-        height: 10,
+        width: 30,
+        height: 15,
         borderRadius: 3,
-        marginLeft: 16
+        marginLeft: 280,
+        marginBottom: 7
     }, locationRootStyle: {
         flexDirection: 'row',
         alignItems: 'center',
-        marginTop: 10
+        marginTop: 5
     }, locationTextStyle: {
         color: color.DARK_GRAY_LOW,
         fontSize: size.FONT_SIZE_S,
         marginLeft: 5
     }, otherTextStyle: {
-        color: color.LIGHT_GRAY_HIGH,
+        color: color.DARK_GRAY,
         fontSize: size.FONT_SIZE_S,
         marginTop: 10
     }, personalInfoRootStyle: {
@@ -51,11 +54,19 @@ export default StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'flex-end',
         alignItems: 'center',
-        marginTop: 10
+        marginTop: 7
     }, acceptButtonStyle: {
         height: size.BUTTON_HEIGHT,
         backgroundColor: color.COMPLETED_STATUS_COLOR,
         marginTop: 20,
+        marginRight: 3,
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginLeft: 3
+    },  locationButtonStyle: {
+        height: size.BUTTON_HEIGHT,
+        backgroundColor: 'skyblue',
+        marginTop: 7,
         marginRight: 3,
         justifyContent: 'center',
         alignItems: 'center',
@@ -72,5 +83,18 @@ export default StyleSheet.create({
         color: color.LIGHT_GRAY_HIGH,
         fontSize: size.FONT_SIZE_S,
         marginLeft: 3
+    },
+    columnTextStyle: {
+        color: color.DARK_GRAY,
+        fontSize: size.FONT_SIZE_S,
+        alignItems: 'center',
+        textAlign: 'center',
+    },
+    columnStyle: {
+        backgroundColor: '#DCDFE0',
+        marginLeft: 3
+    },
+    gridStyle: {
+        marginTop: 4
     }
 })

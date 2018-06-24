@@ -17,12 +17,12 @@ class IncidentRowData extends Component {
                               onPress={() => this.props.incidentDetailPress(this.props.data)}>
                 <View style={style.rootStyle}>
                     <View style={style.topViewRootStyle}>
-                        <Text style={style.dateTextStyle}>{getDateMMM(this.props.data.incident_date)}</Text>
+                        <Text style={style.dateTextStyle}>{getDateMMM(this.props.data.raised_time)}</Text>
                         <View style={[style.statusColorViewStyle,
-                            {backgroundColor: getStatusColor(this.props.data.case_status)}]}/>
+                            {backgroundColor: getStatusColor(this.props.data.ticket_status)}]}/>
                     </View>
                     <Text style={style.caseTitleTextStyle}>
-                        {this.props.data.case_title}
+                        {this.props.data.ticket_number}
                     </Text>
                 </View>
             </TouchableOpacity>

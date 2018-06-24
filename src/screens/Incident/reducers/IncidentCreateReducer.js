@@ -34,7 +34,7 @@ const initialState = {
     isFetching: false,
     eta: '', 
     ert: '',
-    case_id: '',
+    ticket_id: '',
     ticket_status: ''
 };
 
@@ -167,7 +167,7 @@ export default function incidentCreateReducer(state = initialState, action) {
             ...state,
             eta: action.key === IncidentCreateInfo.ETA ? action.value : state.eta,
             ert: action.key === IncidentCreateInfo.ERT ? action.value : state.ert,
-            case_id: action.key === IncidentCreateInfo.TICKET_ID ? action.value : state.case_id
+            ticket_id: action.key === IncidentCreateInfo.TICKET_ID ? action.value : state.ticket_id
             };
         case TICKET_ETA_ERT_SET_API:
             return {
@@ -187,7 +187,7 @@ export default function incidentCreateReducer(state = initialState, action) {
         case TICKET_STATUS:
         return {
             ...state,
-            case_id: action.key === IncidentCreateInfo.TICKET_ID ? action.value : state.case_id,
+            ticket_id: action.key === IncidentCreateInfo.TICKET_ID ? action.value : state.ticket_id,
             ticket_status: action.key === IncidentCreateInfo.TICKET_STATUS ? action.value : state.ticket_status
             };
         case TICKET_STATUS_API:

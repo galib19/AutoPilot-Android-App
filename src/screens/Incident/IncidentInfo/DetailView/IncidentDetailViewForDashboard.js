@@ -7,6 +7,9 @@ import {
     Modal
 } from 'react-native';
 
+import { Col, Row, Grid } from "react-native-easy-grid";
+
+
 import style from './styles/IncidentDetailStyle';
 import color from '../../../../constants/Color';
 import size from '../../../../constants/Size';
@@ -36,9 +39,15 @@ class IncidentDetailViewForDashboard extends Component {
     render() {
         let attachmentView = null;
         let commentModalView;
-        let incident = this.props.dashboardScreenReducer.mostRecentCase[0];
+        let ticket = this.props.dashboardScreenReducer.mostRecentCase[0];
         let  acceptView =
         <View>
+             <TouchableOpacity
+                    underlayColor={color.LIGHT_GRAY_HIGH}
+                    style={style.locationButtonStyle}
+                    onPress={() => this.props.goToNextPage('MapDashboard')}>
+                    <Text>Location</Text>
+                </TouchableOpacity>
             <TouchableOpacity
                 underlayColor={color.BUTTON_PRESS_COLOR}
                 style={style.acceptButtonStyle}
@@ -53,22 +62,61 @@ class IncidentDetailViewForDashboard extends Component {
                 <Text>Reject</Text>
             </TouchableOpacity>
         </View>;
-        //let victimInfo = incident.victims[0];
+        //let victimInfo = ticket.victims[0];
         
 
         return (
             <View style={style.rootStyle}>
+                <View style={[style.statusColorViewStyle,
+                        {backgroundColor: getStatusColor(ticket.ticket_status)}]}/>
+                       
                 <View style={style.titleRootViewStyle}>
-                    <Text style={style.caseTitleStyle}>{incident.case_title}</Text>
-                    <View style={[style.statusColorViewStyle,
-                        {backgroundColor: getStatusColor(incident.case_status)}]}/>
-                        <Text style={style.statusTextStyle}>{incident.case_status}</Text>
+                    <Text style={style.caseTitleStyle}>TT No: {ticket.ticket_number}</Text>
                 </View>
-                <Text style={style.otherTextStyle}>Incident Time: {getYYYYMMDDWithTime(incident.incident_date)}</Text>
-
-                <Text style={style.otherTextStyle}>Problem Type: {incident.case_type}</Text>
-
-                <Text style={style.otherTextStyle}>Details: {incident.case_details}</Text>
+                <View
+                    style={{
+                        marginTop: 5, 
+                        borderWidth: 0.3,
+                        borderColor:'white',
+                        marginRight:25,
+                    }}
+                />
+                <Grid style={style.gridStyle}>
+                    <Col style={style.columnStyle}><Text style={style.columnTextStyle}>Site Id:</Text></Col>
+                    <Col style={style.columnStyle}><Text style={style.columnTextStyle}>{ticket.site.id}</Text></Col>
+                </Grid>
+                <Grid style={style.gridStyle}>
+                    <Col style={style.columnStyle}><Text style={style.columnTextStyle}>Zone:</Text></Col>
+                    <Col style={style.columnStyle}><Text style={style.columnTextStyle}>{ticket.site.zone}</Text></Col>
+                </Grid>
+                <Grid style={style.gridStyle}>
+                    <Col style={style.columnStyle}><Text style={style.columnTextStyle}>Vendor Name:</Text></Col>
+                    <Col style={style.columnStyle}><Text style={style.columnTextStyle}>{ticket.vendor_name}</Text></Col>
+                </Grid>
+                <Grid style={style.gridStyle}>
+                    <Col style={style.columnStyle}><Text style={style.columnTextStyle}>Raised Time:</Text></Col>
+                    <Col style={style.columnStyle}><Text style={style.columnTextStyle}>{getYYYYMMDDWithTime(ticket.raised_time)}</Text></Col>
+                </Grid>
+                <Grid style={style.gridStyle}>
+                    <Col style={style.columnStyle}><Text style={style.columnTextStyle}>Raised E.CO Concern Name:</Text></Col>
+                    <Col style={style.columnStyle}><Text style={style.columnTextStyle}> </Text></Col>
+                </Grid>
+                <Grid style={style.gridStyle}>
+                    <Col style={style.columnStyle}><Text style={style.columnTextStyle}>Assigner Cell No:</Text></Col>
+                    <Col style={style.columnStyle}><Text style={style.columnTextStyle}> </Text></Col>
+                </Grid>
+                <Grid style={style.gridStyle}>
+                    <Col style={style.columnStyle}><Text style={style.columnTextStyle}>Given For:</Text></Col>
+                    <Col style={style.columnStyle}><Text style={style.columnTextStyle}> </Text></Col>
+                </Grid>
+                <Grid style={style.gridStyle}>
+                    <Col style={style.columnStyle}><Text style={style.columnTextStyle}>Ticket Type:</Text></Col>
+                    <Col style={style.columnStyle}><Text style={style.columnTextStyle}>{ticket.ticket_type}</Text></Col>
+                </Grid>
+                <Grid style={style.gridStyle}>
+                    <Col style={style.columnStyle}><Text style={style.columnTextStyle}>PG Owner:</Text></Col>
+                    <Col style={style.columnStyle}><Text style={style.columnTextStyle}>{ticket.pg_owner}</Text></Col>
+                </Grid>
                 <View style={style.horizontalBarStyle}/>
 
                 {acceptView}
@@ -91,7 +139,7 @@ class IncidentDetailViewForDashboard extends Component {
     getStatus() {
         let infoList = [];
 
-        infoList.push(this.getFieldObject('case_id', this.props.incidentCreateReducer.case_id));
+        infoList.push(this.getFieldObject('ticket_id', this.props.incidentCreateReducer.ticket_id));
         infoList.push(this.getFieldObject('ticket_status',this.props.incidentCreateReducer.ticket_status));
         
       

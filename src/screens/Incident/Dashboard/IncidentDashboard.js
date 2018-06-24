@@ -69,6 +69,9 @@ class IncidentDashboard extends Component {
                             keyboardShouldPersistTaps='handled'>
                     <View style={style.rootStyle}>
                         <UserInfo/>
+
+                         {previousCaseButton}
+                         
                         <View style={style.topViewRootStyle}>
                             <Text style={style.currentCaseTextStyle}>{AppText.LATEST_CASE}</Text>
                             <View style={style.statusViewRootStyle}>
@@ -83,7 +86,7 @@ class IncidentDashboard extends Component {
 
                         {caseDetailView}
 
-                        {previousCaseButton}
+                       
                     </View>
                 </ScrollView>
 

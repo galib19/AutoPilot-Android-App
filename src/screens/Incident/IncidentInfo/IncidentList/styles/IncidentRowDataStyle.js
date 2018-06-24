@@ -21,7 +21,7 @@ export default StyleSheet.create({
     }, caseTitleTextStyle: {
         flex: 1,
         color: color.BLACK,
-        fontSize: size.FONT_SIZE_M,
+        fontSize: size.FONT_SIZE_S,
         fontWeight: 'bold',
         marginTop: 5
     }, personalInfoRootStyle: {

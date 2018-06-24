@@ -102,7 +102,7 @@ class AcceptInfo extends Component {
 
         infoList.push(this.getFieldObject('eta', getYYYYMMDDWithTime(this.props.incidentCreateReducer.eta)));
         infoList.push(this.getFieldObject('ert', this.props.incidentCreateReducer.ert));
-        infoList.push(this.getFieldObject('case_id', this.props.incidentCreateReducer.case_id));
+        infoList.push(this.getFieldObject('ticket_id', this.props.incidentCreateReducer.ticket_id));
         
         
 
