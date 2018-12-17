@@ -38,7 +38,7 @@
                    android:resource="@mipmap/ic_launcher"/>
          <meta-data
                 android:name="com.google.android.geo.API_KEY"
-                android:value="AIzaSyCsbk8ZOOh-NABbADISiidCJIN-OWuZyWM"/>
+                android:value="AIzaSyBM81MSVmBwG3lXU_2dhkLteIGQV_YbYUU"/>
  
 
         <service android:name="com.evollu.react.fcm.MessagingService" android:enabled="true" android:exported="true">

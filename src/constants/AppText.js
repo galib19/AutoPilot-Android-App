@@ -1,12 +1,12 @@
 module.exports = {
-    SPLASH_SCREEN_TEXT: 'Quick Force Mobile App',
+    SPLASH_SCREEN_TEXT: 'LifeBlood',
     LOGIN: 'Login',
     WELCOME: 'Welcome to',
-    App_NAME: 'Quick Force Management App',
+    App_NAME: 'LifeBlood',
     EMAIL: 'Email',
     PASSWORD: 'Password',
     FORGOT_PASSWORD: 'Forgot Password',
-    COMPANY_NAME: 'Brain Station@23',
+    COMPANY_NAME: '@IITDU',
     EMAIL_EMPTY_MESSAGE: 'Email can not be empty',
     PASSWORD_EMPTY_MESSAGE: 'Password can not be empty',
     DASHBOARD_TITLE: 'Dashboard',
@@ -96,5 +96,6 @@ module.exports = {
     OTP_RESEND_SUCCESSFULLY: 'OTP resend to your mobile successfully',
     PASSWORD_RESET_SUCCESSFULLY: 'Password reset successfully',
     LOGOUT_SUCCESSFULLY: 'Logout successfully',
-    TICKET_MAP: 'Location'
+    TICKET_MAP: 'Location',
+    TICKET_DETAIL: 'Ticket Detail'
 };

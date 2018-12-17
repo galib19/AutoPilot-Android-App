@@ -13,6 +13,10 @@ export default StyleSheet.create({
         fontSize: size.FONT_SIZE_S,
         fontWeight: 'bold',
         marginLeft: 5
+    },  statusRootStyle: {
+        flexDirection: 'row',
+        flexWrap: 'wrap',
+        marginBottom: 10
     }, statusColorViewStyle: {
         width: 30,
         height: 15,

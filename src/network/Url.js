@@ -1,2 +1,2 @@
 //LOCAL PC
-export const BASE_URL = 'http://172.16.231.64:8000/api/';
+export const BASE_URL = 'http://192.168.0.101:8080/api/';

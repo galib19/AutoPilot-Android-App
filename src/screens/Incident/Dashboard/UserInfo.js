@@ -40,7 +40,7 @@ class UserInfo extends Component {
                 <View style={style.innerViewRootStyle}>
                     <View style={style.infoRootStyle}>
                         <Text style={style.nameTextStyle}>{this.state.userName}</Text>
-                        <Text style={style.designationTextStyle}>Engineer</Text>
+                        <Text style={style.designationTextStyle}>Receiver</Text>
                     </View>
                     {/* <View style={style.imageCircleViewStyle}>
                         {userImageView}

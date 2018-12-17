@@ -78,7 +78,7 @@ class UserSettingScreen extends Component {
                             {/* {profileImageView} */}
                             <View style={styles.rightRootStyle}>
                                 <Text style={styles.nameTextStyle}>{this.state.userName}</Text>
-                                <Text style={styles.designationTextStyle}>Engineer</Text>
+                                <Text style={styles.designationTextStyle}>Receiver</Text>
                             </View>
                         </View>
 

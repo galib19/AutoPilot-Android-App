@@ -46,77 +46,16 @@ class IncidentDetailViewForDashboard extends Component {
                     underlayColor={color.LIGHT_GRAY_HIGH}
                     style={style.locationButtonStyle}
                     onPress={() => this.props.goToNextPage('MapDashboard')}>
-                    <Text>Location</Text>
+                    <Text>Show on Map</Text>
                 </TouchableOpacity>
-            <TouchableOpacity
-                underlayColor={color.BUTTON_PRESS_COLOR}
-                style={style.acceptButtonStyle}
-                onPress={() => this.props.goToNextPage('AcceptInfo')}>
-                <Text>Accept</Text>
-            </TouchableOpacity>
-            <TouchableOpacity
-                underlayColor={color.BUTTON_PRESS_COLOR}
-                style={style.rejectButtonStyle}
-                onPressIn={this.updateStatusRejected.bind(this)}
-                onPress={this.updateStatusButton.bind(this)}>
-                <Text>Reject</Text>
-            </TouchableOpacity>
+            
         </View>;
         //let victimInfo = ticket.victims[0];
         
 
         return (
             <View style={style.rootStyle}>
-                <View style={[style.statusColorViewStyle,
-                        {backgroundColor: getStatusColor(ticket.ticket_status)}]}/>
-                       
-                <View style={style.titleRootViewStyle}>
-                    <Text style={style.caseTitleStyle}>TT No: {ticket.ticket_number}</Text>
-                </View>
-                <View
-                    style={{
-                        marginTop: 5, 
-                        borderWidth: 0.3,
-                        borderColor:'white',
-                        marginRight:25,
-                    }}
-                />
-                <Grid style={style.gridStyle}>
-                    <Col style={style.columnStyle}><Text style={style.columnTextStyle}>Site Id:</Text></Col>
-                    <Col style={style.columnStyle}><Text style={style.columnTextStyle}>{ticket.site.id}</Text></Col>
-                </Grid>
-                <Grid style={style.gridStyle}>
-                    <Col style={style.columnStyle}><Text style={style.columnTextStyle}>Zone:</Text></Col>
-                    <Col style={style.columnStyle}><Text style={style.columnTextStyle}>{ticket.site.zone}</Text></Col>
-                </Grid>
-                <Grid style={style.gridStyle}>
-                    <Col style={style.columnStyle}><Text style={style.columnTextStyle}>Vendor Name:</Text></Col>
-                    <Col style={style.columnStyle}><Text style={style.columnTextStyle}>{ticket.vendor_name}</Text></Col>
-                </Grid>
-                <Grid style={style.gridStyle}>
-                    <Col style={style.columnStyle}><Text style={style.columnTextStyle}>Raised Time:</Text></Col>
-                    <Col style={style.columnStyle}><Text style={style.columnTextStyle}>{getYYYYMMDDWithTime(ticket.raised_time)}</Text></Col>
-                </Grid>
-                <Grid style={style.gridStyle}>
-                    <Col style={style.columnStyle}><Text style={style.columnTextStyle}>Raised E.CO Concern Name:</Text></Col>
-                    <Col style={style.columnStyle}><Text style={style.columnTextStyle}> </Text></Col>
-                </Grid>
-                <Grid style={style.gridStyle}>
-                    <Col style={style.columnStyle}><Text style={style.columnTextStyle}>Assigner Cell No:</Text></Col>
-                    <Col style={style.columnStyle}><Text style={style.columnTextStyle}> </Text></Col>
-                </Grid>
-                <Grid style={style.gridStyle}>
-                    <Col style={style.columnStyle}><Text style={style.columnTextStyle}>Given For:</Text></Col>
-                    <Col style={style.columnStyle}><Text style={style.columnTextStyle}> </Text></Col>
-                </Grid>
-                <Grid style={style.gridStyle}>
-                    <Col style={style.columnStyle}><Text style={style.columnTextStyle}>Ticket Type:</Text></Col>
-                    <Col style={style.columnStyle}><Text style={style.columnTextStyle}>{ticket.ticket_type}</Text></Col>
-                </Grid>
-                <Grid style={style.gridStyle}>
-                    <Col style={style.columnStyle}><Text style={style.columnTextStyle}>PG Owner:</Text></Col>
-                    <Col style={style.columnStyle}><Text style={style.columnTextStyle}>{ticket.pg_owner}</Text></Col>
-                </Grid>
+                
                 <View style={style.horizontalBarStyle}/>
 
                 {acceptView}

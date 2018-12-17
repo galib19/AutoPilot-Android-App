@@ -70,19 +70,13 @@ class IncidentDashboard extends Component {
                     <View style={style.rootStyle}>
                         <UserInfo/>
 
-                         {previousCaseButton}
+                          
                          
                         <View style={style.topViewRootStyle}>
-                            <Text style={style.currentCaseTextStyle}>{AppText.LATEST_CASE}</Text>
-                            <View style={style.statusViewRootStyle}>
-                                <StatusView backgroundColor={color.ASSIGNED_STATUS_COLOR} title={Status.ASSIGNED}/>
-                                <StatusView backgroundColor={color.IN_PROGRESS_STATUS_COLOR} title={Status.IN_PROGRESS}/>
-                                <StatusView backgroundColor={color.COMPLETED_STATUS_COLOR} title={Status.COMPLETED}/>
-                                <StatusView backgroundColor={color.FAILED_STATUS_COLOR} title={Status.FAILED}/>
-                            </View>
+                            
                         </View>
 
-                        {emptyView}
+                        
 
                         {caseDetailView}
 

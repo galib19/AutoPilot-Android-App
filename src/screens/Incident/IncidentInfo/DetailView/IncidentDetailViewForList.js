@@ -23,7 +23,9 @@ import PropTypes from 'prop-types';
 import ModalBox from 'react-native-modalbox';
 import CommentScreen from '../CommentView/CommentScreen';
 import {getStringValue} from '../../../../components/Validation/EmptyCheck';
+import StatusView from '../../../../components/StatusView/StatusView';
 import {getYYYYMMDDWithTime} from '../../../../components/DateFormat/FormattedDate';
+import Status from '../../../../constants/StatusConstant';
 import {connect} from 'react-redux';
 import IncidentCreateInfo from '../../../../constants/IncidentCreateInfo';
 import {updateStatus,callUpdateStatusApi} from '../../actions/IncidentCreateAction';
@@ -97,6 +99,13 @@ class IncidentDetailViewForList extends Component {
 
         return (
             <View style={style.rootStyle}>
+                <View style={style.statusRootStyle}>
+                    <StatusView backgroundColor={color.ASSIGNED_STATUS_COLOR} title={Status.ASSIGNED}/>
+                    <StatusView backgroundColor={color.IN_PROGRESS_STATUS_COLOR} title={Status.IN_PROGRESS}/>
+                    <StatusView backgroundColor={color.COMPLETED_STATUS_COLOR} title={Status.COMPLETED}/>
+                    <StatusView backgroundColor={color.FAILED_STATUS_COLOR} title={Status.FAILED}/>
+                </View>
+
                 <View style={[style.statusColorViewStyle,
                         {backgroundColor: getStatusColor(ticket.ticket_status)}]}/>
                        
