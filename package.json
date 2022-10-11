@@ -11,7 +11,7 @@
     "moment": "^2.21.0",
     "prop-types": "^15.6.1",
     "react": "16.2.0",
-    "react-native": "0.53.3",
+    "react-native": "0.70.2",
     "react-native-action-button": "^2.8.4",
     "react-native-check-box": "^2.1.0",
     "react-native-document-picker": "^2.1.0",
